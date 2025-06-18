@@ -13,7 +13,7 @@ document.getElementById('application-form').addEventListener('submit', function 
   localStorage.setItem('urbanrides-form', JSON.stringify(data));
 
   // Відправка в Google Таблицю
-  fetch('https://script.google.com/macros/s/AKfycbwX7p1ifNPZwMl2RN466-ebdCcgSHpiOSE-UdzysW51P5PIh_cBIsiklBEnGStMe-tx/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbxuN2cP5DYUnHAtkawj5e0KabyTz4WBiNqOWf4QtkXj8WdAh5GqHn8Ug46F9CJ8_yZk/exec', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
