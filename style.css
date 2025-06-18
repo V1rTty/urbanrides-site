@@ -1,0 +1,527 @@
+/* Загальні стилі */
+body {
+  position: relative;
+  background: #000000;  /* чёрный фон */
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Псевдоэлемент с картинкой с пониженной прозрачностью */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/img/back.jpg');  /* путь к картинке */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+
+ opacity: 0.05;  /* 0 - полностью прозрачно, 1 - полностью непрозрачно */
+  z-index: 0;
+}
+
+/* Весь следующий контент будет находиться ABOVE слоя с картинкой */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Хедер, меню та логотип */
+header {
+
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+header .logo {
+  width: 150px;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 0.5px solid #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#open-form {
+  background: #ff0000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#open-form:hover {
+  background: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+header ul li a:hover {
+  color: #fff;
+  border: 1px solid #ffffff;
+  box-shadow: 0 4px 14px #ff0000;
+}
+
+#banner {
+  background-color: #000;
+  position: relative;
+  text-align: center;
+  font-family: "Dela Gothic One", sans-serif;
+  font-style: normal;
+  font-size: 39px;
+}
+
+/* Банер */
+.banner-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center 60%;
+  opacity: 0.4;
+}
+
+#banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  font-size: 45px;
+  color: #ffffff;
+  z-index: 1;
+  text-shadow: #000000 0px 0px 20px;
+  
+}
+
+
+/* Розділ "Про нас" */
+#about {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 50px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: #fff 0px 0px 20px;
+  
+}
+
+#about h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+#about ul.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+#about ul.features li {
+  border: 2px solid #fff;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+
+
+#about ul.features h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ff0000;
+  font-weight: bold; 
+}
+/* Розділи автомобілів */
+#sections {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 50px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: #fff 0px 0px 20px;
+  
+}
+
+#sections ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+  gap: 30px;
+}
+
+#sections ul li {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: #000000;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#sections ul li a {
+  color: #000000;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sections ul li a img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+#sections ul li:hover {
+  border: 2px solid #ff0000;
+  box-shadow: 0 0 20px #ff0000;
+  transform: translateY(-5px);
+}
+
+/* Чому обирають нас */
+#reasons {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 50px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: #fff 0px 0px 20px;
+}
+
+#reasons ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+  gap: 30px;
+}
+
+#reasons ul li {
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+/* Умови оренди */
+#rental-conditions {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;  
+  padding: 50px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: #fff 0px 0px 20px;
+}
+
+#rental-conditions ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+  gap: 30px;
+}
+
+#rental-conditions ul li {
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+/* Етапи оренди */
+#steps {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 50px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: #fff 0px 0px 20px;
+}
+
+#steps ol {
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  counter-reset: step;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+  gap: 30px;
+}
+
+#steps ol li {
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  position: relative;
+  
+}
+
+#steps ol li:hover {
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  position: relative;
+  box-shadow: #ff0000 0px 0px 20px;
+}
+
+#steps ol li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  top: -25px;
+  left: 2px;
+  background: #fff;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+/* Контакти */
+#contact {
+  margin: 30px;
+  padding: 50px;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: #fff 0px 0px 20px;
+}
+
+/* Контейнер для тексту та карти */
+#contact .contact-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Текст зліва */
+#contact .contact-info {
+  flex: 1;
+}
+
+#contact p {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+/* Карта справа */
+#contact #map {
+  flex: 2;
+  box-shadow: #ff0000 0px 0px 20px;
+}
+
+
+/* Футер */
+footer {
+  padding: 20px 40px;
+  background: #000;
+  color: #fff;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 30px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+footer ul li a:hover {
+  color: #fff;
+  background: #fff;
+  border: 2px solid #ff0000;
+}
+
+/* Адаптив */
+@media (max-width: 1200px) {
+  header ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    
+  }
+
+  #contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hamburger {
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  header ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background: #000000cc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: #ff0000 0px 0px 20px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    
+  }
+
+  header ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Модалка */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #888888cc; /* напівпрозорий сірий фон */
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  display: none;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #ff0000;
+  position: relative;
+  width: 300px;
+}
+
+.modal-content h2 {
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.modal-content input {
+  width: 105%;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  transform: translateX(-5%);
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #ff0000;
+  color: #fff;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.modal-content button:hover {
+  background: #cc0000;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #000;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+
+/* Повідомлення після заявки */
+#thank-you-modal.modal-content {
+  text-align: center;
+}
+
+#thank-you-modal p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #000;
+}
