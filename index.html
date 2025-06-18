@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="UrbanRides - прокат автомобілів">
+  <meta name="keywords" content="оренда, прокат, автомобілі">
+  <meta name="author" content="UrbanRides">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>UrbanRides</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Шапка с названием и меню -->
+<header>
+  <a href="/index.html"><img class="logo" src="/img/logo.png" alt="Логотип UrbanRides"></a>
+  
+  <div class="hamburger" id="hamburger">
+    ☰
+  </div>
+
+  <nav id="navMenu">
+    <ul>
+      <li><a href="#about">Про нас</a></li>
+      <li><a href="#sections">Розділи автомобілів</a></li>
+      <li><a href="#rental-conditions">Умови оренди</a></li>
+      <li><a href="#contact">Контакти</a></li>
+      <li><a href="#" id="open-form">Залишити заявку</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Модалка з заявкою -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="close-modal" class="close">&times;</span>
+    <h2>Залишіть заявку</h2>
+    <form id="application-form">
+      <input type="text" id="first-name" placeholder="Ім'я" required>
+      <input type="text" id="last-name" placeholder="Прізвище" required>
+      <input type="tel" id="phone" placeholder="Телефон" required>
+      <input type="email" id="email" placeholder="E-mail" required>
+      <button type="submit">Відправити</button>
+    </form>
+  </div>
+</div>
+
+  <!-- Основний банер із картинкою -->
+  <section id="banner">
+    <h1>АВТО ТВОЄ МРІЇ ТУТ</h1>
+    <img class="banner-image" src="/img/avtohead.jpg" alt="Банер з картинкою прокату автомобілів">
+  </section>
+
+  <!-- Про нас -->
+  <section id="about">
+    <p>UrbanRides надає послуги прокату автомобілів з 2020 року. В автопарку представлені різні моделі — на будь-який смак, бюджет та потреби.</p>
+
+    <ul class="features">
+      <li>
+        <h2>Бездоганний зовнішній вигляд авто</h2>
+        <p>Кожен автомобіль проходить ретельну перевірку та підготовку перед прокатом.</p>
+      </li>
+      <li>
+        <h2>Технічна підтримка 24/7</h2>
+        <p>Наша команда завжди готова допомогти вам у будь-який час.</p>
+      </li>
+      <li>
+        <h2>Видача та повернення у будь-який час</h2>
+        <p>Ми працюємо без вихідних, щоб ви могли зручно орендувати автомобіль.</p>
+      </li>
+    </ul>
+
+  </section>
+
+  <!-- Розділи автомобілів -->
+  <section id="sections">
+    <h2>ВИБЕРІТЬ АВТО ДЛЯ ОРЕНДИ</h2>
+    <ul>
+      <li><a href="sedans.html"><img src="/img/sedan.png" alt="Седани">Седани</a></li>
+      <li><a href="coupe.html"><img src="/img/coupe.png" alt="Купе">Купе</a></li>
+      <li><a href="suv.html"><img src="/img/suv.png" alt="Позашляховики">Позашляховики</a></li>
+      <li><a href="wagon.html"><img src="/img/wagon.png" alt="Універсали">Універсали</a></li>
+      <li><a href="convertible.html"><img src="/img/convertible.png" alt="Кабріолети">Кабріолети</a></li>
+    </ul>
+  </section>
+
+    <!-- Чому обирають нас -->
+  <section id="reasons">
+    <h2>Чому обирають нас</h2>
+    <ul>
+      <li>Широкий автопарк</li>
+      <li>Гнучкість умов прокату</li>
+      <li>Безпечно та зручно</li>
+      <li>Доступно кожному</li>
+    </ul>
+  </section>
+
+  <!-- Умови оренди -->
+  <section id="rental-conditions">
+    <h2>Умови оренди</h2>
+
+    <ul>
+      <li>Вік від 22 років</li>
+      <li>Стаж водіння від 2 років</li>
+      <li>Дійсне посвідчення водія</li>
+      <li>Депозит під час прокату</li>
+      <li>Оплата карткою або готівкою</li>
+    </ul>
+
+  </section>
+
+   <!-- Етапи оренди -->
+  <section id="steps">
+    <h2>Етапи оренди</h2>
+    <ol>
+      <li>Вибір автомобіля</li>
+      <li>Бронювання</li>
+      <li>Укладення договору</li>
+      <li>Отримання автомобіля</li>
+      <li>Безпечне використання</li>
+      <li>Повернення автомобіля</li>
+    </ol>
+  </section>
+
+  <section id="contact">
+  <h2>Контакти</h2>
+
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <p>Телефон: +38 (000) 000-0000</p>
+      <p>Telegram: @UrbanRides</p>
+      <p>Адреса: місто Київ, вул. Хрещатик, 1</p>
+    </div>
+
+    <iframe id="map" src="https://www.google.com/maps?q=Київ, Хрещатик, 1&output=embed" width="600" height="450" style="border:0;"></iframe>
+  </div>
+  </section>
+
+
+  <!-- Підвал -->
+  <footer>
+    <p>© 2025 UrbanRides</p>
+  </footer>
+
+<script src="script.js"></script>
+
+<div id="thank-you-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="close-thank-you">&times;</span>
+    <h2>Дякуємо за заявку!</h2>
+    <p>Очікуйте на дзвінок або повідомлення найближчим часом.</p>
+  </div>
+</div>
+
+</body>
+</html>
